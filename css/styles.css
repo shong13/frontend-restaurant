@@ -285,9 +285,6 @@ nav h1 a {
 }
 
 @media only screen and (max-width: 750px) {
-  #reviews-list li {
-    display: box;
-  }
   .inside {
     display: flex;
     flex-direction: column;
@@ -308,6 +305,7 @@ nav h1 a {
     order: 1;
     width: 100vw;
     text-align: center;
+    padding: auto;
   }
   .inside #map-container {
     order: 2;
@@ -320,19 +318,23 @@ nav h1 a {
     order: 3;
     position: relative;
     width: 100vw;
-    text-align: center;
     margin: auto;
     padding: 150px 15px 50px 20px;
+    align-items: center;
   }
   .inside #reviews-container{
     width: 100vw;
-    padding: 5px;
     margin: auto;
+  }
+  #reviews-list li {
+    display: box;
   }
   #reviews-container h2 {
     text-align: center;
   }
-  
+  .inside #footer {
+    width: 100vw;
+  }
 }
 @media only screen and (max-width: 443px) {
   .filter-options {
