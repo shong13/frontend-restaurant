@@ -6,6 +6,7 @@ var newMap;
  */
 document.addEventListener('DOMContentLoaded', (event) => {  
   initMap();
+
 });
 
 /**
@@ -32,8 +33,14 @@ initMap = () => {
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
+    mapIndex();
   });
-}  
+} 
+
+mapIndex = () => {
+  const map = document.getElementById('map');
+  map.setAttribute("tabindex", "-1")
+} 
  
 /* window.initMap = () => {
   fetchRestaurantFromURL((error, restaurant) => {

@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   initMap(); // added 
   fetchNeighborhoods();
   fetchCuisines();
+  mapIndex();
 });
 
 /**
@@ -87,6 +88,11 @@ initMap = () => {
   }).addTo(newMap);
 
   updateRestaurants();
+}
+
+mapIndex = () => {
+  const map = document.getElementById('map');
+  map.setAttribute("tabindex", "-1")
 }
 /* window.initMap = () => {
   let loc = {
@@ -179,6 +185,8 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.tabindex = 3;
+  more.setAttribute("aria-label", `${restaurant.name}'s details`);
   li.append(more)
 
   return li

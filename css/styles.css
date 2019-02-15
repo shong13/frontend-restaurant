@@ -283,6 +283,12 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+#cuisines-select:focus,
+#neighborhoods-select:focus {
+  outline-color: red;
+  color: white;
+  background-color: black;
+}
 
 @media only screen and (max-width: 750px) {
   .inside {
