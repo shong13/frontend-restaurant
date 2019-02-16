@@ -300,24 +300,18 @@ nav h1 a {
     width: 100%;
   }
   .inside header{
-    order: 0;
     width: 100%;
   }
   header {
     display: flex;
     flex-direction: column;
   }
-  header nav {
-    order: 0;
-  }
   header #breadcrumb {
-    order: 1;
     width: 100%;
     text-align: center;
     padding: auto;
   }
   .inside #map-container {
-    order: 2;
     top: 130px;
     position: relative;
     height: 25vh;
@@ -327,7 +321,6 @@ nav h1 a {
     width: 100%;
   }
   .inside #restaurant-container {
-    order: 3;
     position: relative;
     width: 100vw;
     margin: auto;
