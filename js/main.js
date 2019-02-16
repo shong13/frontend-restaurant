@@ -37,6 +37,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
+    option.setAttribute("role", "option");
     select.append(option);
   });
 }
@@ -65,6 +66,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
+    option.setAttribute("role", "option");
     select.append(option);
   });
 }
@@ -185,7 +187,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  more.tabindex = 3;
+  more.setAttribute("tabindex", "3");
   more.setAttribute("aria-label", `${restaurant.name}'s details`);
   li.append(more)
 
