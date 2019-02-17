@@ -94,7 +94,7 @@ initMap = () => {
 
 mapIndex = () => {
   const map = document.getElementById('map');
-  map.setAttribute("tabindex", "-1")
+  map.setAttribute("tabindex", "-1");
 }
 
 /**
@@ -195,7 +195,6 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     }
     self.markers.push(marker);
   });
-
 } 
 
 
