@@ -302,33 +302,24 @@ nav h1 a {
   .inside header{
     width: 100%;
   }
-  header {
-    display: flex;
-    flex-direction: column;
-  }
   header #breadcrumb {
     width: 100%;
-    text-align: center;
-    padding: auto;
+    text-align: left;
   }
   .inside #map-container {
     top: 130px;
+    left: 40px;
     position: relative;
     height: 25vh;
     width: 100%;
   }
-  .inside main {
-    width: 100%;
-  }
   .inside #restaurant-container {
-    position: relative;
-    width: 100vw;
+    width: 100%;
     margin: auto;
-    padding: 150px 15px 50px 20px;
     align-items: center;
   }
   .inside #reviews-container{
-    width: 100vw;
+    width: 100%;
     margin: auto;
   }
   #reviews-list li {
@@ -338,7 +329,7 @@ nav h1 a {
     text-align: center;
   }
   .inside #footer {
-    width: 100vw;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 443px) {
