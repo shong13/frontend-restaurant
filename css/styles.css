@@ -185,7 +185,7 @@ nav h1 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-#restaurants-list li a:focus{
+#restaurants-list li a:focus {
   background-color: #49CF2FFF;
   outline-color: #000000FF;
 }
