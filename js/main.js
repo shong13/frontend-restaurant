@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   mapIndex();
 });
 
+
 /**
  * Fetch all neighborhoods and set their HTML.
  */
@@ -116,6 +117,7 @@ updateRestaurants = () => {
     } else {
       resetRestaurants(restaurants);
       fillRestaurantsHTML();
+      changeIndex();
     }
   })
 }
@@ -160,7 +162,7 @@ createRestaurantHTML = (restaurant) => {
   image.alt=`Restaurant ${restaurant.name}'s image`;
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
@@ -175,7 +177,6 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  more.setAttribute("tabindex", "3");
   more.setAttribute("aria-label", `${restaurant.name}'s details`);
   li.append(more)
 
@@ -196,6 +197,14 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } 
+
+//Disables the marker from tabindex
+changeIndex = () => {
+  const markers = document.querySelectorAll(".leaflet-marker-icon");
+  markers.forEach(marker => {
+    marker.setAttribute("tabindex", "-1")
+  })
+}
 
 if(navigator.serviceWorker){
   navigator.serviceWorker
